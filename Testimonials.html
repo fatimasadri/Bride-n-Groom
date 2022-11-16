@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Styles.css" type="text/css">  <!-- Css sheet attached -->
+   <script type="text/javascript">    <!-- Javascript -->
+   <!-- four methods used -->
+ function read() 
+	 {
+	    var name = document.getElementById("name").value = localStorage.getItem("name")
+		var rbox = document.getElementById("rbox").value = localStorage.getItem("rbox")
+	 }
+ function cancel() {
+     document.getElementById("name").value = ""
+     document.getElementById("rbox").value = ""
+
+      alert("successfully deleted!") 
+
+      }
+function save()
+	 {
+	    var name = document.getElementById("name").value
+		var rbox = document.getElementById("rbox").value 
+		
+		localStorage.setItem("name", name)
+		localStorage.setItem("rbox", rbox)
+		
+		alert("Sucessfully submitted!")
+
+        document.getElementById("name").value = ""
+        document.getElementById("rbox").value = ""
+		display() 
+	}
+	function display() {
+	    document.getElementById("namebox").value = localStorage.getItem("name")
+	    document.getElementById("box").value =  localStorage.getItem("rbox")
+	}
+
+   </script>
+
+<title> Bride'n Groom wedding planners </title> <!-- TITLE -->
+</head>
+<!-- BODY -->
+<body onload="display()">
+<!-- container division that will contain the homepage -->
+    <div id="container">
+	 <!-- divison names left that will contain the logo -->
+	<div id="left"> <img id="logo" src="Images/logo.png" alt="LOGO">
+	    </div>
+<!-- menu divison will list all the pages in the website -->
+	<div id="menu">
+	<ul>
+             <li><a href="Home.html">Home</a></li>
+		    <li><a href="Services.html">Services</a></li>
+		    <li><a href="Gallery.html">Gallery</a></li>
+		    <li><a href="Testimonials.html" class="designmenu">Testimonials</a></li>
+			<li><a href="Cart.html" >Cart</a></li>
+		    <li><a href="Contact us.html">Contact us</a></li>
+	</ul>
+	</div>
+<!-- Introduction to testimonals -->
+<div id="Testimonials">
+   <h2> TESTIMONIALS </h2>
+   <p> Check out these testimonials from our clients. <br> We are always eager for your feedback. <br>
+Don't hesitate to leave us your review and share your experience with us and others.</p>
+</div>
+<!-- Testimonals table which has testimonals from previous clients -->
+    <div id="reviewtable">
+        <table>
+		   <tr>
+		       <td><h3>Fatima & Hassan</h3>“B’nG are AMAZING! They’re always on point and knows how to get even the craziest guests to stay on task. The team handled my panicky, freak-out moments calmly and kept me from becoming a complete Bridezilla. I felt like they really cared about making my dream wedding a reality.They took all my wedding day stresses away and I was smiling throughout the wedding! They are a MUST-HAVE for any bride and groom. Thank you for everything!”<br>
+			   <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span></td>
+			   <td><img src="Images/19.jpg" alt="reviewpicture"></td>
+		   </tr>
+		   <tr>
+		       <td><h3>Eman & Ahmed</h3>“We chose the month of coordinator package for our wedding and we can’t say enough good things about it! From day one, it was great to work with the team. They managed the wedding day perfectly! Any little mishaps (were fixed immediately. We had the best time at our wedding, and it was so fun and worry-free because of bride ‘n groom planners. Highly recommend!”<br>
+			   <span>&#9733; &#9733; &#9733; &#9733; &#9734;</span></td>
+			   <td><img src="Images/20.jpg" alt="reviewpicture"></td>
+		   </tr>
+		   <tr>
+		       <td><h3>Saba & Mohammed</h3>“This review is overdue:) but I still wanted to let everyone know how WONDERFUL these planners are!
+                 Hiring them was the best decision ever! I am an extremely organized and scheduled person, so when I met with the team I was instantly at ease. Everything was perfectly laid out a week before the wedding, and I had nothing to worry about. They really brought my vision to life and they paid attention to every little detail.”<br>
+                 <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span></td>
+			   <td><img src="Images/21.jpg" alt="reviewpicture"></td>
+		   </tr>
+		   <tr>
+		       <td><h3>Ayesha & Ali</h3>
+                “This review is coming from the groom! In short, they were great and I would hire them again and strongly suggest to our friends or family. My advice is to book with them as soon as you can because they are in high demand specially for the full wedding planning. We couldn’t have asked for a more perfect wedding planner.”<br>
+                  <span>&#9733; &#9733; &#9733; &#9733; &#9734;</span></td>
+			   <td><img src="Images/22.jpg" alt="reviewpicture"></td>
+		   </tr>
+		   <tr>
+		   <td> <textarea name="namebox" id="namebox"> </textarea> <br> 
+		<textarea name="box" id="box" rows="5" cols="53"  > </textarea></td>
+		<td> <input  type="button"  id="deleteR" value="Delete review" onclick="cancel()"> <br> <br>
+             <input  type="button"  id="editR" value="Edit" onclick="read()"></td>		
+		   </tr>
+		</table>
+    </div>
+<br>     
+<!-- Add review form in the form of a table -->
+<div id="Add_review">
+          <table>
+		  <tr>
+		   <td><h2>Add review</h2></td>
+		  </tr>
+		  <tr>
+		  <td>COUPLE NAME:</td>
+		  <td><input type="text" id="name" size="20" placeholder="Names of the couple (xxxx & xxxx)" required></td>
+		  </tr>
+		  <tr>
+		  <td>REVIEW:</td>
+		  <td><textarea name="Review" id="rbox"  rows="5" cols="53" placeholder="Type your Review here..." required></textarea></td>
+		  </tr>
+		  <tr>
+		  <td>Rating:</td>
+		  <td><input id="rating" type="number" min="1" max="5" required></td>
+		  </tr>
+		  <tr>
+		  <td><input type="submit" id="submitR" value="Submit review" onclick="save()"></td>
+		  <td><input  type="button"  id="cancelR" value="Cancel" onclick="cancel()"></td>
+		  </tr>
+		  </table>
+   </div>
+	 
+   
+   </div>
+   </body>
+   </html>

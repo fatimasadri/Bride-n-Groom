@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Styles.css" type="text/css">    <!-- Css sheet attached -->
+    <script type="text/javascript">    <!-- Javascript -->
+	  function newsletter()
+	  {
+	    alert("Succesfully subscribed!") 
+	  }
+	
+    </script>
+  
+<!-- TITLE -->
+<title> Bride'n Groom wedding planners </title>
+</head>
+<!-- Body which contains 6 divisons -->
+<body>
+<!-- container division that will contain the homepage -->
+    <div id="container">
+	 <!-- divison name left that will contain the logo -->
+	<div id="left"> <img id="logo" src="Images/logo.png" alt="LOGO">
+	    </div>
+<!-- menu divison will list all the pages in the website and will serve as clickable link -->
+	<div id="menu">
+	<ul>
+            <li><a href="Home.html" class="designmenu">Home</a></li>
+		    <li><a href="Services.html">Services</a></li>
+		    <li><a href="Gallery.html">Gallery</a></li>
+		    <li><a href="Testimonials.html" >Testimonials</a></li>
+			<li><a href="Cart.html">Cart</a></li>
+		    <li><a href="Contact us.html">Contact us</a></li>
+	</ul>
+	</div>
+<!-- Backgroungimg divison that will contain a background image-->
+	<div id="backgroundimg">
+	 <img id="bgimg" src="Images/1.jpg" alt="BACKGROUND">
+<!-- Welcome text that will be diplayed on top of the background image -->
+	     <div id="textonimg">
+	        <h2> BRIDE 'N GROOM WEDDING PLANNERS</h2>
+			<h3> Your happily ever after begins with us...</h3>
+	    </div>
+	</div>
+	
+	</div>
+<!-- Footer divison that is a newsletter form which allows user to submit their name and email -->
+<div id="footer">
+	<form action="subscribe" method="get" id="newsletter">
+	<h2>Subscribe to our Newsletter</h2>
+    <input type="text" placeholder="Name" name="name" required> <br>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label> <input type="checkbox" checked="checked" name="dailynewsletter"> Daily Newsletter</label>
+   <input id="subscribe" type="submit" value="Subscribe" onclick="newsletter()">
+    </form>
+	</div>
+	
+	
+	</body>
+	</html>

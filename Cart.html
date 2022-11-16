@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Styles.css" type="text/css">  <!-- Css sheet attached -->
+    <script type="text/javascript">  <!--Javascript-->
+	<!--two methods used to passvalues and alert user-->
+function read()
+{
+	 document.getElementById("price").value = sessionStorage.getItem("cart_price")
+}
+function pay()
+{
+    alert("Succesfully paid! We look forward to working with you.")
+}
+
+</script>
+
+<title> Bride'n Groom wedding planners </title> <!-- TITLE -->
+</head>
+<!-- Body which contains 8 divisions -->
+<body onload="read()">
+<!-- container division that will contain the homepage -->
+    <div id="container">
+<!-- divison left that will contain the logo -->
+	<div id="left"> <img id="logo" src="Images/logo.png" alt="LOGO">
+	    </div>
+<!-- menu divison will list all the pages in the website -->
+	<div id="menu">
+	<ul>
+            <li><a href="Home.html">Home</a></li>
+		    <li><a href="Services.html">Services</a></li>
+		    <li><a href="Gallery.html">Gallery</a></li>
+		    <li><a href="Testimonials.html">Testimonials</a></li>
+			<li><a href="Cart.html" class="designmenu">Cart</a></li>
+		    <li><a href="Contact us.html">Contact us</a></li>
+	</ul>
+	</div>
+<!-- Cart division that will contain cart table and payment table -->
+	<div id="cart">
+<!-- A division that contains background image for this page -->
+	  <div id="backgroundimg">
+	       <img id="bgimg" src="Images/cart_bg2.jpg" alt="BACKGROUND">
+<!-- All the text in this page appears on the picture using this division -->
+	    <div id="textimg">
+<!-- cartform division is for cart table -->
+		     <div id="cartform">
+			 <form>
+	     <table>
+		 <tr>
+		    <td><h2> Cart </h2></td>
+			<td><img id="C1" src="Images/cart.jpg"> </td>
+		 </tr>
+		 <tr>
+			<td><form id="dropdown" action="Payment.html"><label>Confirm Package:</label></td>
+			 <td><select>
+		    <option value = "Full wedding planning and designing" type="text" id="P1" > Full wedding planning and designing</option>
+			<option value = "Destination wedding"   type="text" id="P2" > Destination wedding</option>
+			<option value = "Partial planning"  type="text" id="P3" >Partial planning</option>
+			 <option value = "Month-of coordination"  type="text" id="P4">  Month-of coordination</option>
+			  </select>
+			  </form>
+			</td>
+		 </tr>
+		 <tr>
+	   <td><label for="price">Price:</label> </td>
+	  <td><input type="text" name="price" id="price" placeholder="price" required></td>
+	  </tr>
+		 <tr>
+		 <td></td>
+		 <td><a href="Services.html"> <input type="button" value="Cancel"></a></td>
+		 </tr>
+		 </table>
+	      </div>
+	<!--PAYMENT-->
+	<div id="payment">
+	  <form action="action">
+	  <table>
+	  <tr>
+	    <td><h2>Payment</h2></td>
+		<td> <img id="P1" src="Images/payment.jpg"> </td>
+	  </tr>
+	  <tr>
+	  <td><label for="name">Cardholder name</label></td>
+	  <td><input type="text" name="name" id="name" placeholder="Enter cardholder name" required></td>
+	  </tr>
+	  <tr>
+	  <td><label for="cardnumber">Card number</label></td>
+	  <td><input type="text"  name="number" id="cardnumber"  placeholder="###-###-###" required></td>
+	  </tr>
+	  <tr>
+	  <td><label for="expiry date">Expiry date</label></td>
+      <td><input type="month" name="month" id="month" placeholder="MM" required></td>
+	  </tr>
+	  <tr>
+	  <td><label for="CVV number">CVV number</label></td>
+        <td><input type="text" class="cvv number" id="cvvnumber" placeholder="xxx" required></td>
+	  </tr>
+	  <tr>
+	  <td><label for="PIN">PIN</label></td>
+        <td><input type="text" class="PIN" id="PIN" placeholder="xxxx" required></td>
+	  </tr>
+	  <tr>
+	  <td>We accept:</td>
+	  <td> <img id="benefit" src="Images/benefit.jpg" alt="image"> 
+	       <img id="credit" src="Images/visa_m.jpg" alt="image">
+	  </td>
+	  </tr>
+	  <tr>
+        <td><input type="submit" value="Pay now" onclick="pay()"></td>
+		<td><a href="Cart.html"><input type="button" value="Cancel"></a></td>
+	  </tr>
+	  </table>
+	</div>
+	</div>
+	</div>
+	</form>
+	</form>
+	</div>
+	</div>
+	</body>
+	</html>

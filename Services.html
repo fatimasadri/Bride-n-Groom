@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Styles.css" type="text/css">    <!-- Css sheet attached -->
+   <!-- Book function is used to allow the user to book a package, the user will be redirected to cart page -->
+   <script type="text/javascript">    <!-- Javascript -->
+    function book(services) {
+	   if (services == 1){
+	     sessionStorage.setItem("cart_price",800) 
+	   }
+	   else if (services == 2) {
+	   sessionStorage.setItem("cart_price",1200) 
+	   }
+	   else if (services == 3) {
+	    sessionStorage.setItem("cart_price",400) 
+	   }
+	   else if (services == 4) { 
+	   sessionStorage.setItem("cart_price",150)
+	   }
+	
+	}
+   </script>
+<!-- TITLE -->
+<title> Bride'n Groom wedding planners </title>
+</head>
+<!-- Body which has four divisons -->
+<body>
+<!-- container division that will contain the homepage -->
+    <div id="container">
+	 <!-- divison names left that will contain the logo -->
+	<div id="left"> <img id="logo" src="Images/logo.png" alt="LOGO">
+	    </div>
+<!-- menu divison will list all the pages in the website -->
+	<div id="menu">
+	<ul>
+          <li><a href="Home.html">Home</a></li>
+		    <li><a href="Services.html" class="designmenu">Services</a></li>
+		    <li><a href="Gallery.html">Gallery</a></li>
+		    <li><a href="Testimonials.html">Testimonials</a></li>
+			<li><a href="Cart.html">Cart</a></li>
+		    <li><a href="Contact us.html">Contact us</a></li>
+	</ul>
+	</div>
+<!-- Introduction to services in services divison  -->
+	<div id="services">
+	<h2> OUR SERVICES </h2>
+	<p> If you are looking for the perfect wedding,then you have come to the right place!<br>  
+Together with your dreams and our professional planning, we strive to give the happy couple a splendeid soiree that you shall cherish forever.<br>
+ Find which one of our packages suits you the best.We look forward to making your dreams into reality.<br>
+ Book an appointment today!</p> 
+   <img id="image_2" src="Images/2.jpg" alt="Picture">
+	</div>
+<!-- Services provided by the wedding planners placed in the form of a table-->
+     <div id="s_table">
+	    <table>
+<!-- first service -->
+		  <tr>
+		    <td><h3>Full wedding planning and design</h3></td>
+			<td><ul> 
+                <li>Provide mangment of budget, vendor, guests, venue and rentals.</li>
+                <li>Creation of mood board, look book and color palette designing. </li>
+                <li>Designing ceremony and reception, and decor sourcing.</li>	 
+				<li>Advice and consultation included. About 200 hours of service.</li>
+				<li>Full pacakage: 800 BD</li>
+				<li>Per session: 80 BD</li>
+			</ul></td>
+			<!-- when a user clicks on 'book now' link, they will be redirected to the cart page -->
+			<td><a href="Cart.html" onclick="book(1)"> Book now!</a></td>
+		  </tr>
+<!-- second service -->
+        <tr>
+		    <td><h3>Destination Wedding</h3></td>
+			<td><ul> 
+                <li>Provide mangment of budget, vendor, guests, venue and rentals.</li>
+                <li>Creation of mood board, look book and color palette designing.</li>
+                <li>Designing ceremony and reception, and decor sourcing. </li>	 
+				<li>Arrange and book flights. </li>
+				<li>Advice and consultation included. About 200 hours of service.</li>
+				<li>Full pacakage: 1200 BD</li>
+				<li>Per session: 120 BD</li>
+			</ul></td>
+			<td><a href="Cart.html" onclick="book(2)"> Book now!</a></td>
+		  </tr>
+<!-- third service  -->
+        <tr>
+		    <td><h3>Partial Planning</h3></td>
+			<td><ul> 
+                <li>Provide mangment of vendor, venue and rentals.</li>
+                <li>Creation of mood board, look book and color palette designing. </li>
+                <li>Designing ceremony and reception, and help in decor sourcing.</li>	 
+				<li>Advice and consultation included. About 100 hours of service.</li>
+				<li>Full pacakage: 400 BD</li>
+				<li>Per session: 40 BD</li>
+			</ul></td>
+			<td><a href="Cart.html" onclick="book(3)"> Book now!</a></td>
+		  </tr>
+<!-- fourth service  -->
+        <tr>
+		    <td><h3>Month-of coordination</h3></td>
+			<td><ul> 
+                <li>A month prior, floorplan and timeline will be created which would be followed on wedding day. </li>
+                <li>Provide mangment of vendor.  </li>
+                <li>Setup details and collecting gifts would be done. </li>	 
+				<li>Advice and recommendations included. About 40 hours of service.</li>
+				<li>Full pacakage: 150 BD</li>
+				<li>Per session: 15 BD</li>
+			</ul></td>
+			<td><a href="Cart.html" onclick="book(4)"> Book now!</a></td>
+		  </tr>
+		</table>
+     </div>
+	 
+	 </div>
+	 </body>
+	 </html>

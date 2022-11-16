@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Styles.css" type="text/css">  <!-- Css sheet attached -->
+   <script type="text/javascript">  <!-- Javascript -->
+  <!-- Two methods used -->
+function send()
+{
+var Firstname = document.getElementById("Firstname").value
+var Lastname = document.getElementById("Lastname").value
+var Email = document.getElementById("Email").value
+var Subject = document.getElementById("Subject").value
+var Message = document.getElementById("Message").value
+
+localStorage.setItem("Firstname",name)
+localStorage.setItem("Lastname",name)
+localStorage.setItem("Email",Email)
+localStorage.setItem("Subject",Subject)
+localStorage.setItem("Message",Message)
+
+}
+function read() 
+{
+alert("Message succesfully sent!") 
+document.getElementById("name").value = localStorage.getItem("name")
+document.getElementById("email").value = localStorage.getItem("email")
+document.getElementById("subject").value = localStorage.getItem("subject")
+document.getElementById("message").value = localStorage.getItem("message")
+
+}
+</script>
+
+<title> Bride'n Groom wedding planners </title>
+</head>
+<!-- Body contains 6 divisions -->
+<body>
+<!-- container division that will contain the homepage -->
+    <div id="container">
+	 <!-- divison left that will contain the logo -->
+	<div id="left"> <img id="logo" src="Images/logo.png" alt="LOGO">
+	    </div>
+<!-- menu divison will list all the pages in the website -->
+	<div id="menu">
+	<ul>
+            <li><a href="Home.html">Home</a></li>
+		    <li><a href="Services.html">Services</a></li>
+		    <li><a href="Gallery.html">Gallery</a></li>
+		    <li><a href="Testimonials.html">Testimonials</a></li>
+			<li><a href="Cart.html">Cart</a></li>
+		    <li><a href="Contact us.html" class="designmenu">Contact us</a></li>
+	</ul>
+	</div>
+<!-- c_form division -->
+	<div id="c_form"> 
+<!-- A division that contains background image for this page -->
+	<div id="backgroundimg">
+	<img id="bgimg" src="Images/cart_bg.jpg" alt="BACKGROUND">
+<!-- All the text in this page appears on the picture using this division -->
+	 <div id="textimg">
+<!-- contactform division that will contain the contact us form  -->
+	 		<div id="contactform">
+		<form method="get" onsubmit="send()">
+		<table>
+		 <tr>
+		    <td>You can also contact us using this form:</td>
+		 </tr>
+		 <tr>
+		    <td>First name</td>
+			<td><input type="text" id="Firstname" required></td>
+		 </tr>
+		 <tr>
+		    <td>Last name</td>
+			<td><input type="text" id="Lastname" required></td>
+		 </tr>
+		 <tr>
+		    <td>Email</td>
+			<td><input type="email" id="Email" required></td>
+		 </tr>
+		 <tr>
+		    <td>Subject</td>
+			<td><input type="text" id="Subject" required></td>
+		 </tr>
+		 <tr>
+		    <td>Leave us a message</td>
+			<td><textarea id="message" type="text" required></textarea></td>
+		 </tr>
+		 <tr>
+		 <td></td>
+		    <td><input type="submit" value="Submit" onclick="read()"></td>
+		 </tr>
+		</table>
+		</div>
+<!-- info division contains contact information in the form of a list -->
+        <div id="info">
+		 <h3>For more information, contact us through:</h3>
+		 <ul>
+             <li><img src="Images/outlook.png" alt="email">info@bride'ngroom.com</li>
+			 <li><img src="Images/phone.png" alt="phone">+973 37341001</li>
+			 <li><img src="Images/whatsapp.jpeg" alt="whatsapp">+973 34392024</li>
+			 <li><img src="Images/instagram.png" alt="instagram">Bride'ngroom_planners</li>
+			 <li><img src="Images/twitter.png" alt="twitter">Bride'ngroom</li>
+		</ul>
+		</div>
+	
+	
+		</div>
+	</div>
+	</div>
+	</div>
+	</body>
+	</html>
+	

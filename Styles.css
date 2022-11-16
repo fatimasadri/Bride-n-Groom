@@ -1,0 +1,43 @@
+#left {float:left; }
+#logo { float: left; height:45%; width: 35%;}
+#menu {clear:left; float:right; font-weight:bold;}
+#menu li { display:inline; padding:10px;}
+#menu a { color:#7B486C; text-decoration:none; font-size:1.2em;}
+#menu a:hover {color:#56ABDC;}
+#menu .designmenu { text-decoration:underline; font-weight:bold;  }
+#backgroundimg { float:center;}
+#bgimg {padding-top:0%; padding-bottom:5%; padding-left:7%; padding-right:0%; background-repeat:no repeat; background-size:100%;}
+#textonimg { width:100%; position:relative; margin-top:-60%}
+#textonimg h2 {text-align:center; font-family:Helvetica; font-size:2.5em; color:white;}
+#textonimg h3 {text-align:center; font-family:Brush Script MT; font-size:2.3em; color:white;}
+#footer {clear:both; background-color:#D8CFDE; font-weight:bold; border: 2px solid black; padding: 10px; padding-left:31%; margin-top:50%;}
+#services { clear:both; float:center; text-align:center;  background-color:#FCEFF4;  }
+#services h2{ font-family:Helvetica; }
+#services p{ font-family: Cherokee;}
+#s_table {float:center; padding-left:15%; padding-right:10%; background-color:#FCEFF4;}
+#s_table td {padding:1%}
+#s_table a {text-decoration: none; color:#56ABDC; font-weight:bold;}
+#s_table a:hover {color:white;}
+#gallery { clear:both; float:center; text-align:center; background-color:#DFF5F6;}
+#gallery p{ font-family:Brush Script MT; font-size:2.6em; }
+#pictable{background-color:#DFF5F6;}
+#pictable img { height: 100%; width:90%;}
+#Testimonials {clear:both; float:center; text-align:center; background-color:#EAE2F6; }
+#Testimonials p{ font-family: Cherokee; font-size:1.2em;}
+#reviewtable { float:center; padding-left:10%; padding-right:10%; background-color:#EAE2F6; }
+#reviewtable img{ float:right; height: 85%; width:70%; padding-top:1em; padding-bottom:1em;}
+#reviewtable span {color:yellow; }
+#Add_review {clear:both;  background-color:#EAE2F6;  }
+#Add_review table { padding-left:33%;  }
+#info { float:left; padding-left:15%; padding-top:5%; font-weight:bold; font-size:2.5em; color:white; }
+#info img { width:2.5%; height: 2.5%; padding-top:0.5em;}
+#textimg { width:100%; position:relative; margin-top:-90%}
+#contactform { align:center; float:right; padding-right:10%; }
+#contactform table { color:white; font-weight:bold; font-size:2.5em; align:center;}
+#contactform input {font-size: 0.5em;}
+#cartform table { align:center; float:right; padding-right:18%; color:white; font-weight:bold; font-size:2.5em; padding-top:-50%;}
+#C1 { height:18%; width:18%;}
+#payment table { float:left; padding-left:40%; color:white; font-weight:bold; font-size:1.5em;  border-spacing:0 15px;}
+#payment img { width:10%; height: 10%; padding-top:0.5em;}
+
+
